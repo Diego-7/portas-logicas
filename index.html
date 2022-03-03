@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Portas lógicas</title>
+</head>
+<body>
+    <h1>Portas Lógicas:</h1>
+    <div class="porta-and">
+        <h2>Porta AND:</h2>
+        <form name="andForm" action="" method="post">
+        <label>Insira o primeiro número:</label>
+        <input type="number" required name="f_and1"/><br />
+        <label>Insira o segundo número:</label>
+        <input type="number" name="f_and2" /><br />
+        <label>Saída:</label>
+        <input type="text" class="saida-and" />
+        <button type="button" class="resultBtn" onclick="andCalc()">Resultado</button>
+    </form>
+    </div>
+    
+    <div class="porta-or">
+        <h2>Porta OR:</h2>
+        <form name="orForm" action="" method="post">
+        <label>Insira o primeiro número:</label>
+        <input type="number" name="f_or1"/><br />
+        <label>Insira o segundo número:</label>
+        <input type="number" name="f_or2"/> <br />
+        <label>Saída:</label>
+        <input type="text" class="saida-or"/>
+        <button type="button" class="resultBtn" onclick="orCalc()">Resultado</button>
+    </form>
+    </div>
+    
+    <div class="porta-xor">
+        <h2>Porta XOR:</h2>
+        <form name="xorForm" action="" method="post">
+        <label>Insira o primeiro número:</label>
+        <input type="number" name="f_xor1" /><br />
+        <label>Insira o segundo número:</label>
+        <input type="number" name="f_xor2"/><br />
+        <label>Saída:</label> <br />
+        <input type="text" class="saida-xor" />
+        <button type="button" onclick="xorCalc()" class="resultBtn" >Resultado</button>
+    </form>
+    </div>
+
+    <div class="porta-nand">
+        <h2>Porta NAND:</h2>
+        <form name="nandForm" action="" method="post">
+        <label>Insira o primeiro número:</label>
+        <input type="number" name="f_nand1" /><br />
+        <label>Insira o segundo número:</label>
+        <input type="number" name="f_nand2" /> <br />
+        <label>Saída:</label> <br />
+        <input type="text" class="saida-nand" />
+        <button type="button" onclick="nandCalc()" class="resultBtn">Resultado</button>
+    </form>
+    </div>
+
+    <div class="porta-nor">
+        <h2>Porta NOR:</h2>
+        <form name="norForm" action="" method="post">
+        <label>Insira o primeiro número:</label>
+        <input type="number"  name="f_nor1"/><br />
+        <label>Insira o segundo número:</label>
+        <input type="number" name="f_nor2" /> <br />
+        <label>Saída:</label> <br />
+        <input type="text" class="saida-nor" />
+        <button type="button" onclick="norCalc()" class="resultBtn">Resultado</button>
+    </form>
+    </div>
+
+    <div class="porta-xnor">
+        <h2>Porta XNOR:</h2>
+        <form name="xnorForm" action="" method="post">
+        <label>Insira o primeiro número:</label>
+        <input type="number" name="f_xnor1"/><br />
+        <label>Insira o segundo número:</label>
+        <input type="number" name="f_xnor2"/> <br />
+        <label>Saída:</label> <br />
+        <input type="text" class="saida-xnor"/>
+        <button type="button" onclick="xnorCalc()" class="resultBtn">Resultado</button>
+    </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
