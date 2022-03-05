@@ -1,3 +1,12 @@
+function invalido(num1, num2, res){
+  
+if(num1 > 1 || num2 > 1 || num1 == '' || num2 == '') {
+    
+    res.value = "INVALIDO"
+}
+
+}
+
 //PORTA AND
 function andCalc(){
 
@@ -6,22 +15,17 @@ function andCalc(){
     let num1 = document.andForm.f_and1.value;
 
     let num2 = document.andForm.f_and2.value;
-
-    if(num1 == 0 && num2 == 0){
-
-        resAnd.value = 0
-    }
     
-    else if(num1 == 1 && num2 == 1){
+    if(num1 == 1 && num2 == 1){
 
         resAnd.value = 1
-
-    } else if(num1 > 1 || num2 > 1 || num1 == '' || num2 == ''){
-        resAnd.value = "INVALIDO"
+    }
     
-    } else {
+     else {
         resAnd.value = 0;
     }
+
+    invalido(num1, num2, resAnd);
 
 }
 
@@ -43,18 +47,18 @@ function orCalc(){
         resOr.value = 0;
     }
 
-    if(num1 > 1 || num2 > 1  || num1 == '' || num2 == ''){
-        resOr.value = "INVALIDO"
+    invalido(num1, num2, resOr);
         
     } 
 
-}
 //PORTA NOT
 function notCalc(){
 
     const resNot = document.querySelector(".saida-not");
 
     let num1 = document.notForm.f_not.value;
+
+    let num2 = "lasanha";
 
     if(num1 == 1 ){
 
@@ -67,12 +71,9 @@ function notCalc(){
         
     }
 
-    if(num1 > 1 || num1 == '' || num2 == ''){
-        resNot.value = "INVALIDO"
+    invalido(num1, num2,  resNot);
         
     } 
-
-}
 
 //PORTA XOR
 function xorCalc(){
@@ -92,12 +93,9 @@ function xorCalc(){
         resXor.value = 0;
     }
 
-    if(num1 > 1 || num2 > 1 || num1 == '' || num2 == ''){
-        resXor.value = "INVALIDO"
-        
+    invalido(num1, num2, resXor);   
+    
     } 
-
-}
 
 //PORTA NAND
 function nandCalc(){
@@ -113,13 +111,11 @@ function nandCalc(){
         resNand.value = 0
     }
     
-    else if(num1 > 1 || num2 > 1 || num1 == '' || num2 == ''){
-        resNand.value = "INVALIDO"
-    }
-    
     else {
         resNand.value = 1;
     }
+
+    invalido(num1, num2, resNand);
 }
 
 //PORTA NOR
@@ -140,10 +136,7 @@ function norCalc(){
         resNor.value = 0;
     }
 
-    if(num1 > 1 || num2 > 1 || num1 == '' || num2 == ''){
-        resNor.value = "INVALIDO"
-        
-    } 
+    invalido(num1, num2, resNor);
 
 }
 
@@ -165,9 +158,6 @@ function xnorCalc(){
         resXnor.value = 0;
     }
 
-    if(num1 > 1 || num2 > 1 || num1 == '' || num2 == ''){
-        resXnor.value = "INVALIDO"
-        
-    } 
+    invalido(num1, num2, resXnor);
 
 }
