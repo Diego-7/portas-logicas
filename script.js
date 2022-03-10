@@ -58,7 +58,7 @@ function notCalc(){
 
     let num1 = document.notForm.f_not.value;
 
-    let num2 = false;
+    let num2 = "nulo";
 
     if(num1 == 1 ){
 
