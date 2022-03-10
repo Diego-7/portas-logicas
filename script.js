@@ -58,20 +58,20 @@ function notCalc(){
 
     let num1 = document.notForm.f_not.value;
 
-    let num2 = "nulo";
+if(num1 > 1 || num1 == '') {
+    
+    res.value = "INVALIDO"
+}
 
-    if(num1 == 1 ){
+   else if(num1 == 1 ){
 
         resNot.value = 0
-    }
-    
-   else if(num1 == 0){
+
+    }else{
 
     resNot.value = 1
         
     }
-
-    invalido(num1, num2,  resNot);
         
     } 
 
