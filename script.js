@@ -60,7 +60,7 @@ function notCalc(){
 
 if(num1 > 1 || num1 == '') {
     
-    res.value = "INVALIDO"
+    resNot.value = "INVALIDO"
 }
 
    else if(num1 == 1 ){
